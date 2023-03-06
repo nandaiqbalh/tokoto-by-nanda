@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:tokoto_by_nanda/constants.dart';
 import 'package:tokoto_by_nanda/screens/forgot_password/forgot_password_screen.dart';
+import 'package:tokoto_by_nanda/screens/sign_up/sign_up_screen.dart';
 import 'package:tokoto_by_nanda/size_config.dart';
 
 class NoAccountText extends StatelessWidget {
@@ -12,25 +13,34 @@ class NoAccountText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Column(
       children: [
-        Text(
-          "Don't have an account?",
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(16),
-          ),
-        ),
-        GestureDetector(
-          onTap: () {},
-          child: Text(
-            "Sign Up",
-            style: TextStyle(
-              fontSize: getProportionateScreenWidth(16),
-              color: kPrimaryColor,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Don't have an account?",
+              style: TextStyle(
+                fontSize: getProportionateScreenWidth(16),
+              ),
             ),
-          ),
-        )
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, SignUpScreen.routeName);
+              },
+              child: Text(
+                "Sign Up",
+                style: TextStyle(
+                  fontSize: getProportionateScreenWidth(16),
+                  color: kPrimaryColor,
+                ),
+              ),
+            )
+          ],
+        ),
+        SizedBox(
+          height: getProportionateScreenHeight(30),
+        ),
       ],
     );
   }

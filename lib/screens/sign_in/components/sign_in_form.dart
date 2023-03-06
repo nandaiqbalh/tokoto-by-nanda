@@ -76,11 +76,10 @@ class _SignFormState extends State<SignForm> {
               text: "Continue",
               press: () {
                 if (_formKey.currentState!.validate()) {
+                  // if all valid, then go to login success screen
+                  Navigator.pushNamed(context, LoginSuccessScreen.routeName);
                   _formKey.currentState!.save();
                 }
-
-                // if all valid, then go to login success screen
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               },
             ),
           ),
