@@ -1,10 +1,12 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
-import 'package:tokoto_by_nanda/components/splash_content.dart';
+import 'package:tokoto_by_nanda/components/default_button.dart';
+import 'package:tokoto_by_nanda/screens/splash/components/splash_content.dart';
+import 'package:tokoto_by_nanda/screens/sign_in/sign_in_screen.dart';
 import 'package:tokoto_by_nanda/size_config.dart';
 
-import '../constants.dart';
+import '../../../constants.dart';
 
 class Body extends StatefulWidget {
   const Body({super.key});
@@ -72,7 +74,10 @@ class _BodyState extends State<Body> {
                         height: getProportionateScreenHeight(56),
                         child: DefaultButton(
                           text: "Continue",
-                          press: () {},
+                          press: () {
+                            Navigator.pushNamed(
+                                context, SignInScreen.routeName);
+                          },
                         ),
                       ),
                       Spacer()

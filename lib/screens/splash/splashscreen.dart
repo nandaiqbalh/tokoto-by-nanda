@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:tokoto_by_nanda/components/body.dart';
+import 'package:tokoto_by_nanda/screens/splash/components/body.dart';
 import 'package:tokoto_by_nanda/size_config.dart';
 
 class Splashscreen extends StatelessWidget {
