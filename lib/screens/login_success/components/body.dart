@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tokoto_by_nanda/components/default_button.dart';
+import 'package:tokoto_by_nanda/screens/home/home_screen.dart';
 import 'package:tokoto_by_nanda/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -35,7 +36,7 @@ class Body extends StatelessWidget {
               text: "Back to Home",
               press: () {
                 // if all valid, then go to login success screen
-                // Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                Navigator.pushReplacementNamed(context, HomeScreen.routeName);
               },
             ),
           ),
